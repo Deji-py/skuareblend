@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+*:focus {
+  outline: none;
+}
+.hideScroll::-webkit-scrollbar {
+  display: none;
+}
+/* Add these styles to your CSS file */
+.comment-card {
+  /* Your existing styles for comment cards */
+
+  /* Add padding to create space for lines */
+  padding-left: 20px;
+  position: relative;
+}
+
+.comment-card::before {
+  /* Vertical line connecting comments */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px; /* Adjust the left offset as needed */
+  width: 2px; /* Adjust the line width as needed */
+  height: 100%;
+  background-color: #ccc; /* Adjust the line color as needed */
+  z-index: -1;
+}
+.blue-tag {
+  color: blue;
+  /* Add any other styling you want here */
+}
+.comment-card::after {
+  /* Horizontal line connecting replies */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px; /* Adjust the line width as needed */
+  height: 2px; /* Adjust the line height as needed */
+  background-color: #ccc; /* Adjust the line color as needed */
+  z-index: -1;
+}
+
+/* Define the animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation to an element */
+.rotatedisc {
+  animation: rotate 2s linear infinite; /* Change the duration and timing function as needed */
+}
+
+.reverseShadow {
+  -webkit-box-shadow: 1px -6px 27px -7px rgba(163, 161, 163, 0.2);
+  -moz-box-shadow: 1px -6px 27px -7px rgba(163, 161, 163, 0.2);
+  box-shadow: 1px -6px 27px -7px rgba(163, 161, 163, 0.2);
+}
+
+@media (display-mode: standalone) {
+  /* Set the background color to white for the entire page */
+  body {
+    background-color: white;
+  }
+}
+
+input:focus {
+  outline-width: 5px;
+}

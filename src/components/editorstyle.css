@@ -1,0 +1,25 @@
+/* Custom CSS for Draft.js WYSIWYG editor toolbar */
+.custom-toolbar {
+  background-color: rgba(229, 231, 235, 0.5);
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Custom styles for toolbar buttons when not active */
+.custom-toolbar .rdw-option-wrapper {
+  background-color: transparent;
+  color: #333;
+  border-radius: 4px;
+  padding: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom styles for toolbar buttons when active */
+.custom-toolbar .rdw-option-wrapper .active {
+  background-color: #007acc;
+  /* Change the background color when active */
+  color: #fff; /* Change the text color when active */
+}
